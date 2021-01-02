@@ -798,11 +798,32 @@ img {
   outline: none;
 }
 
-.form-field textarea {
+.comment-input {
+  position: relative;
   resize: none;
   width: 100%;
   min-height: 120px;
-  padding-left: 16px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+}
+
+.comment-label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  transition: transform 250ms var(--standart-animation);
+}
+
+.comment-input:focus + .comment-label,
+.comment-input:not(:placeholder-shown) + .comment-label {
+  color: var(--accent-color);
+  transform: translateY(-35px);
+}
+
+.comment-input:focus {
+  border-color: var(--accent-color);
 }
 
 .backdrop.is-hidden {
@@ -831,7 +852,7 @@ img {
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
   color: var(--accent-color);
-  transform: translate(-26px, -50px);
+  transform: translate(-26px, -44px);
 }
 
 .form-input:focus {
@@ -839,6 +860,7 @@ img {
 }
 
 /* Modal Icons */
+
 .policy-agreement {
   position: relative;
   display: flex;
