@@ -386,7 +386,7 @@ img {
   transition: color 250ms var(--standart-animation), background-color 250ms var(--standart-animation);
 }
 
-.social-link:not(:last-child) {
+.social-item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -501,10 +501,6 @@ img {
 
 .footer-social {
   display: flex;
-}
-
-.footer-social .social-item:not(:last-child) {
-  margin-right: 10px;
 }
 
 .subscribe-container .social-link {
