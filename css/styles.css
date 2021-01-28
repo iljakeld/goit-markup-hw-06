@@ -527,6 +527,7 @@ img {
 .subscribe-form .btn.primary {
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 10px 28px;
 }
 
@@ -810,6 +811,7 @@ img {
   top: 12px;
   left: 16px;
   transition: transform 250ms var(--standart-animation);
+  cursor: text;
 }
 
 .comment-input:focus + .comment-label,
@@ -843,6 +845,7 @@ img {
   left: 42px;
   transform: translateY(-50%);
   transition: transform 250ms var(--standart-animation);
+  cursor: text;
 }
 
 .form-input:focus + .form-label,
