@@ -176,6 +176,7 @@ img {
   display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
   text-decoration: none;
   color: var(--primary-text-color);
   font-weight: 500;
@@ -525,6 +526,7 @@ img {
 }
 
 .subscribe-form .btn.primary {
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -576,6 +578,7 @@ img {
   letter-spacing: 0.06em;
   height: 50px;
   padding: 10px 32px;
+  align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   transition: background-color 250ms var(--standart-animation);
@@ -890,7 +893,8 @@ img {
   overflow: hidden;
 }
 
-.checkbox-icon {
+.policy-text::before {
+  content: '';
   position: absolute;
   top: 50%;
   left: 13px;
@@ -904,7 +908,7 @@ img {
   transition: all 250ms var(--standart-animation);
 }
 
-.checkbox:checked + .checkbox-icon {
+.checkbox:checked ~ .policy-text::before {
   border-color: transparent;
   background-color: var(--accent-color);
   background-image: url(../images/check.svg);
