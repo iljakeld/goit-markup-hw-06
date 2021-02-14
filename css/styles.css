@@ -518,7 +518,7 @@ img {
 /* Subscribe form in footer*/
 
 .subscribe-form {
-  margin-left: 94px;
+  margin-left: auto;
 }
 .subscribe {
   display: flex;
@@ -791,11 +791,18 @@ img {
 }
 
 .form-input {
+  position: relative;
   width: 100%;
+  height: 40px;
   padding: 12px 0px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  transition: border-color 250ms var(--standart-animation);
+}
+
+.form-input:focus {
+  border-color: var(--accent-color);
 }
 
 .comment-input {
@@ -807,24 +814,18 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-}
-
-.comment-label {
-  position: absolute;
-  top: 12px;
-  left: 16px;
-  transition: transform 250ms var(--standart-animation);
-  cursor: text;
-}
-
-.comment-input:focus + .comment-label,
-.comment-input:not(:placeholder-shown) + .comment-label {
-  color: var(--accent-color);
-  transform: translateY(-35px);
+  transition: border-color 250ms var(--standart-animation);
 }
 
 .comment-input:focus {
   border-color: var(--accent-color);
+}
+
+.comment-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 4px;
+  transition: transform 250ms var(--standart-animation);
 }
 
 .backdrop.is-hidden {
@@ -837,28 +838,21 @@ img {
 }
 
 .form-field {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
   position: relative;
 }
 
-.form-label {
-  position: absolute;
-  top: 50%;
-  left: 42px;
-  transform: translateY(-50%);
-  transition: transform 250ms var(--standart-animation);
-  cursor: text;
-}
-
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
+.form-field:focus {
   color: var(--accent-color);
-  transform: translate(-26px, -44px);
 }
 
-.form-input:focus {
-  border-color: var(--accent-color);
+.form-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 4px;
 }
 
 /* Modal Icons */
@@ -871,11 +865,12 @@ img {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.71;
+  margin-top: 10px;
 }
 
 .icon {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 16px;
   transform: translateY(-50%);
   color: var(--title-text-color);
@@ -891,6 +886,10 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.checkbox:focus + .policy-text::before {
+  outline: 2px solid var(--accent-color);
 }
 
 .policy-text::before {
@@ -925,4 +924,8 @@ img {
   position: relative;
   color: var(--accent-color);
   margin-left: 4px;
+}
+
+.modal .btn.primary {
+  margin-top: 30px;
 }
