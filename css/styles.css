@@ -467,8 +467,9 @@ img {
   margin-bottom: 20px;
 }
 
-.footer .footer-address {
+.footer .exact-address {
   color: var(--white-color);
+  text-decoration: none;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -670,11 +671,7 @@ img {
 
   opacity: 0;
   transform: translateY(100%);
-  transition: transform 250ms var(--standart-animation);
-}
-
-.product-overlay p {
-  margin: 0;
+  transition: transform 250ms var(--standart-animation), opacity 250ms var(--standart-animation);
 }
 
 .portfolio-link:hover .product-overlay,
@@ -835,7 +832,9 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 250ms var(--standart-animation), visibility 250ms var(--standart-animation);
 }
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.7);
 }
